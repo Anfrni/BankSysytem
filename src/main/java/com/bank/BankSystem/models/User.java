@@ -8,6 +8,8 @@ public class User implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+
+
 	private int id;
 	private String firstname;
 	private String surname;
@@ -63,9 +65,18 @@ public class User implements Serializable{
 		this.dateJoined = dateJoined;
 	}
 
+	public User(int id, String firstname, String surname, String phone, String address, String dateJoined) {
+		super();
+		this.id = id;
+		this.firstname = firstname;
+		this.surname = surname;
+		this.phone = phone;
+		this.address = address;
+		this.dateJoined = dateJoined;
+	}
 
 	public User() {
-		// TODO Auto-generated constructor stub
+		this(0,"", "", "","", "");
 	}
 
 }

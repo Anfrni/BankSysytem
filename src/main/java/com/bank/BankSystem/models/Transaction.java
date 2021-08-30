@@ -51,8 +51,17 @@ public class Transaction implements java.io.Serializable{
 		this.memo = memo;
 	}	
 
-	public Transaction() {
-		// TODO Auto-generated constructor stub
+	public Transaction(int id, String action, double amount, String date, String memo) {
+		super();
+		this.id = id;
+		this.action = action;
+		this.amount = amount;
+		this.date = date;
+		this.memo = memo;
+	}
+
+	public Transaction(int id, String action, double amount, String date) {
+		this(id, action, amount, date, "");
 	}
 
 }

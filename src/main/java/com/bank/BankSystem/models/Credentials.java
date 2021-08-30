@@ -7,10 +7,18 @@ public class Credentials implements java.io.Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public Credentials() {
-		// TODO Auto-generated constructor stub
+	public Credentials(int id, String username, String password) {
+		this(id, username, password, 1);
 	}
 	
+	public Credentials(int id, String username, String password, int role) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.password = password;
+		this.role = role;
+	}
+
 	private int id;
 	private String username;
 	private String password;
