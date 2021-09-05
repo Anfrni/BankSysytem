@@ -2,6 +2,7 @@ package com.bank.BankSysytem.controllers;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,8 +16,8 @@ public class UserController {
 	}
 
 	@GetMapping("/v1/users/{id}")
-	public String getUser(int id) {
-		// TODO learn how to pass variable to controller
+	public String getUser(@PathVariable int id) {
+		// TODO get user from DB given specified ID
 		return String.format("Hello user %s data", id);
 	}
 	
@@ -26,7 +27,7 @@ public class UserController {
 	}
 	
 	@DeleteMapping("/v1/users/{id}")
-	public void deleteUser(int id) {
+	public void deleteUser(@PathVariable int id) {
 		// TODO remove user with given id from all DBs
 	}
 }
