@@ -22,8 +22,8 @@ public class UserController {
 	 */
 	public static String getUser(int id) {
 		// TODO get user from DB given specified ID
-		System.out.println("implement get User logic");
-		return String.format("Hello user %s data", id);
+		System.out.println("need to implement get User logic");
+		return String.format("Hello user %s", id);
 	}
 	
 	/**
@@ -34,9 +34,9 @@ public class UserController {
 	 * creates User in database table with the specified parameters.
 	 * This method is not called often
 	 */
-	public static void createUser(int id, String username, String password, int role) {
+	public static void createUser(int id, String firstname, String surname, String phone, String address) {
 		// TODO create user in DB tableS: 'USERS', 'CREDENTIALS'
-		System.out.println("implement create user logic");
+		System.out.println("need to implement create user logic");
 	}
 	
 	/**
