@@ -79,4 +79,11 @@ public class User implements Serializable{
 		this(0,"", "", "","", "");
 	}
 
+	@Override
+	public String toString() {
+		return String.format("{'id': %d, 'firstname': '%s', 'surname': '%s', 'phone': '%s', 'address': '%s', 'dateJoined': '%s'}", id, firstname, surname, phone, address, dateJoined);
+	}
+	
+	
+
 }

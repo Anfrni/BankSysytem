@@ -36,7 +36,8 @@ public class UserController {
 	 */
 	public static void createUser(int id, String firstname, String surname, String phone, String address) {
 		// TODO create user in DB tableS: 'USERS', 'CREDENTIALS'
-		System.out.println("need to implement create user logic");
+		System.out.print("need to implement create user logic");
+		System.out.println(String.format(" for %s %s", firstname, surname));
 	}
 	
 	/**
