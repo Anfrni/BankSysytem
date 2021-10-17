@@ -1,5 +1,7 @@
 package com.bank.BankSysytem.routes;
 
+import java.util.List;
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,20 +23,18 @@ public class UserRoutes {
 	private CredentialController credController;
 
 	@GetMapping()
-	public String getAllUsers() {
+	public List<User> getAllUsers() {
 		return userController.getAllUsers();
 	}
 
 	@GetMapping("/{id}")
-	public String getUser(@PathVariable Integer id) {
+	public User getUser(@PathVariable Integer id) {
 		return userController.getUser(id);
 	}
 	
 	@PostMapping()
 	@ResponseBody
 	public void createUser(@RequestBody User user) {
-		System.out.println("User:");
-		// send JSON data and be able to see values printed to console
 		userController.createUser(user);
 	}
 	
