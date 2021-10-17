@@ -14,33 +14,34 @@ import com.bank.BankSysytem.controllers.UserController;
 import com.bank.BankSysytem.controllers.CredentialController;
 
 @RestController
-@RequestMapping("/v1")
+@RequestMapping("/v1/users")
 public class UserRoutes {
+	
+	private UserController userController;
+	private CredentialController credController;
 
-	@GetMapping("/users")
+	@GetMapping()
 	public String getAllUsers() {
-		return UserController.getAllUsers();
+		return userController.getAllUsers();
 	}
 
-	@GetMapping("/users/{id}")
-	public String getUser(@PathVariable int id) {
-		return UserController.getUser(id);
+	@GetMapping("/{id}")
+	public String getUser(@PathVariable Integer id) {
+		return userController.getUser(id);
 	}
 	
-	@PostMapping("/users/")
+	@PostMapping()
 	@ResponseBody
 	public void createUser(@RequestBody User user) {
 		System.out.println("User:");
-		//TODO send JSON data and be able to see values printed to console
-//		UserController.createUser(id, firstname, surname, phone, address);
-//		CredentialController.createCredentials(id, username, password, role);
-		System.out.println();
+		// send JSON data and be able to see values printed to console
+		userController.createUser(user);
 	}
 	
-	@DeleteMapping("/users/{id}")
-	public void deleteUser(@PathVariable int id) {
-		UserController.deleteUser(id);
-		CredentialController.deleteCredentials(id);
+	@DeleteMapping("/{id}")
+	public void deleteUser(@PathVariable Integer id) {
+		userController.deleteUser(id);
+		credController.deleteCredentials(id);
 	}
 
 }

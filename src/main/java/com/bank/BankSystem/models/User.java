@@ -2,6 +2,8 @@ package com.bank.BankSystem.models;
 
 import java.io.Serializable;
 
+import org.springframework.data.annotation.Id;
+
 public class User implements Serializable{
 	
 	/**
@@ -9,8 +11,8 @@ public class User implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 
-
-	private int id;
+	@Id
+	private Integer id;
 	private String firstname;
 	private String surname;
 	private String phone;
@@ -21,7 +23,7 @@ public class User implements Serializable{
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -65,7 +67,7 @@ public class User implements Serializable{
 		this.dateJoined = dateJoined;
 	}
 
-	public User(int id, String firstname, String surname, String phone, String address, String dateJoined) {
+	public User(Integer id, String firstname, String surname, String phone, String address, String dateJoined) {
 		super();
 		this.id = id;
 		this.firstname = firstname;

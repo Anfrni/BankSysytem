@@ -7,30 +7,26 @@ public class Balance implements java.io.Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public Balance() {
-		this(0,0);
-	}
-	
-	public Balance(int id, double value) {
+	public Balance(Integer id, Float value) {
 		super();
 		this.id = id;
 		this.value = value;
 	}
 
-	private int id;
+	private Integer id;
 
-	private double value;
+	private Float value;
 	
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
-	public double getValue() {
+	public Float getValue() {
 		return value;
 	}
-	public void setValue(double value) {
+	public void setValue(Float value) {
 		this.value = value;
 	}
 	

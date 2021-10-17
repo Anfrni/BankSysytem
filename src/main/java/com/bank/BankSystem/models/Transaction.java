@@ -6,17 +6,17 @@ public class Transaction implements java.io.Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private int id;
+	private Integer id;
 	private String action;
 	private double amount;
 	private String date;
 	private String memo;
 	
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -51,7 +51,7 @@ public class Transaction implements java.io.Serializable{
 		this.memo = memo;
 	}	
 
-	public Transaction(int id, String action, double amount, String date, String memo) {
+	public Transaction(Integer id, String action, double amount, String date, String memo) {
 		super();
 		this.id = id;
 		this.action = action;
@@ -60,7 +60,7 @@ public class Transaction implements java.io.Serializable{
 		this.memo = memo;
 	}
 
-	public Transaction(int id, String action, double amount, String date) {
+	public Transaction(Integer id, String action, double amount, String date) {
 		this(id, action, amount, date, "");
 	}
 
