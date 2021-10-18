@@ -2,11 +2,14 @@ package com.bank.BankSysytem.services;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.bank.BankSystem.models.User;
 import com.bank.BankSysytem.repositories.UserRepository;
 
 public class UserService {
 
+	@Autowired
 	private UserRepository repo;
 	
 	//create

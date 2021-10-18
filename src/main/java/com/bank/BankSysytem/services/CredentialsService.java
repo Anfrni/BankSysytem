@@ -2,11 +2,14 @@ package com.bank.BankSysytem.services;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.bank.BankSystem.models.Credentials;
 import com.bank.BankSysytem.repositories.CredentialsRepository;
 
 public class CredentialsService {
 
+	@Autowired
 	private CredentialsRepository repo;
 	
 	// create

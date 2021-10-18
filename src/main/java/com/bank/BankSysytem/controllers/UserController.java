@@ -2,6 +2,8 @@ package com.bank.BankSysytem.controllers;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.bank.BankSystem.models.User;
 import com.bank.BankSysytem.services.UserService;
 
@@ -11,6 +13,7 @@ import com.bank.BankSysytem.services.UserService;
  */
 public class UserController {
 	
+	@Autowired
 	private UserService userServ;
 	
 	/**

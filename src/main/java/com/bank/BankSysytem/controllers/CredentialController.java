@@ -2,11 +2,14 @@ package com.bank.BankSysytem.controllers;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.bank.BankSystem.models.Credentials;
 import com.bank.BankSysytem.services.CredentialsService;
 
 public class CredentialController {
 	
+	@Autowired
 	private CredentialsService credServ;
 	//TODO CRUD operations
 	
