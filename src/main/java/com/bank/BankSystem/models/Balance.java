@@ -1,5 +1,8 @@
 package com.bank.BankSystem.models;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Balance implements java.io.Serializable{
 
 	/**

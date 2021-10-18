@@ -2,8 +2,11 @@ package com.bank.BankSystem.models;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
+
 import org.springframework.data.annotation.Id;
 
+@Entity
 public class User implements Serializable{
 	
 	/**
